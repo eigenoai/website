@@ -1,0 +1,83 @@
+/* Eigeno Core Theme Style Sheet - Inspired by Stability AI Styling */
+
+/* Custom Typography & Resets */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-main: #0b0f19;
+    --bg-card: #111827;
+    --border-subtle: #1f2937;
+    --text-primary: #f9fafb;
+    --text-secondary: #9ca3af;
+    --accent-glow: rgba(59, 130, 246, 0.15);
+    --accent-cyan: #06b6d4;
+    --accent-indigo: #6366f1;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+/* Custom Background Blur Effects */
+.bg-blur-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--accent-glow) 0%, rgba(11, 15, 25, 0) 70%);
+    filter: blur(60px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.glow-top-right {
+    top: -100px;
+    right: -100px;
+}
+
+.glow-bottom-left {
+    bottom: 10%,;
+    left: -150px;
+}
+
+/* Utility Layout Enhancements */
+.card-hover-effect {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover-effect:hover {
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+    box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.2);
+}
+
+/* Custom Utilities for Gradient Text */
+.text-gradient-purple-cyan {
+    background: linear-gradient(to right, #a855f7, #22c55e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Responsive Overrides for Simplex Live Sandbox Box */
+.terminal-window {
+    background-color: #030712;
+    border: 1px solid var(--border-subtle);
+    font-family: monospace;
+}
+
+.terminal-accent-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Medical Disclaimer Footer Note Style */
+.disclaimer-text {
+    font-size: 0.75rem;
+    color: #4b5563;
+    line-height: 1.5;
+    text-align: center;
+}

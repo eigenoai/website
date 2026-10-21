@@ -3,327 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eigeno | Predictive Disease Risk & Drug Repurposing</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0b0f19;
-            color: #f3f4f6;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #6ee7b7 0%, #3b82f6 50%, #8b5cf6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .gradient-border {
-            position: relative;
-            border: 1px solid transparent;
-            background-clip: padding-box;
-        }
-        .gradient-border::after {
-            position: absolute;
-            top: -1px; bottom: -1px; left: -1px; right: -1px;
-            background: linear-gradient(135deg, rgba(110, 231, 183, 0.2), rgba(59, 130, 246, 0.2));
-            content: '';
-            z-index: -1;
-            border-radius: inherit;
-        }
-    </style>
+    <title>Eigeno | Predictive Health Intelligence & Drug Repurposing</title>
+    <!-- Tailwind CSS for functional utility utility system -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Linked Custom Exterior Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="antialiased selection:bg-blue-500 selection:text-white">
+<body class="bg-[#0b0f19] text-gray-50 min-h-screen relative antialiased selection:bg-blue-500/30 selection:text-blue-200">
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-blue-900/40 via-purple-900/40 to-blue-900/40 border-b border-slate-800 text-center py-2.5 text-xs font-medium tracking-wide text-slate-300 px-4">
-        Introducing Eigeno-1: Our state-of-the-art multimodal model for early chronic risk assessment. <a href="#research" class="underline hover:text-white transition-colors">Read the whitepaper →</a>
-    </div>
+    <!-- Background Ambient Blurs -->
+    <div class="bg-blur-glow glow-top-right"></div>
+    <div class="bg-blur-glow glow-bottom-left"></div>
 
     <!-- Navigation Header -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg(#0b0f19/80) border-b border-slate-900/80 px-6 lg:px-16 h-20 flex items-center justify-between">
-        <div class="flex items-center gap-10">
-            <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-                <span class="h-6 w-6 rounded-md bg-gradient-to-tr from-emerald-400 to-blue-600 block"></span>
-                Eigeno
-            </a>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
-                <a href="#models" class="hover:text-white transition-colors">Models</a>
-                <a href="#diseases" class="hover:text-white transition-colors">Disease Scope</a>
-                <a href="#repurposing" class="hover:text-white transition-colors">Drug Repurposing</a>
-                <a href="#solutions" class="hover:text-white transition-colors">Solutions</a>
-                <a href="#research" class="hover:text-white transition-colors">Research</a>
-            </nav>
-        </div>
-        <div class="flex items-center gap-4">
-            <a href="#contact" class="hidden sm:inline-block text-sm font-medium text-slate-300 hover:text-white transition-colors">Get in touch</a>
-            <a href="#platform" class="bg-white text-slate-950 hover:bg-slate-200 transition-all font-medium text-sm px-4 py-2 rounded-full shadow-sm">Access Platform API</a>
+    <header class="sticky top-0 z-50 backdrop-blur-xl border-b border-gray-800 bg-[#0b0f19]/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-10">
+                <a href="#" class="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-emerald-400 flex items-center justify-center text-sm font-black text-black">E</span>
+                    Eigeno
+                </a>
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+                    <a href="#diseases" class="hover:text-white transition-colors">Pathology Models</a>
+                    <a href="#repurposing" class="hover:text-white transition-colors">Drug Repurposing</a>
+                    <a href="#deployment" class="hover:text-white transition-colors">Deployment</a>
+                    <a href="#research" class="hover:text-white transition-colors">Research</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="hidden sm:inline-block text-sm font-medium text-gray-300 hover:text-white transition-colors">Get in touch</a>
+                <a href="#deployment" class="px-5 py-2.5 bg-white text-black font-semibold text-sm rounded-full hover:bg-gray-100 transition-all shadow-md shadow-white/5">Start Integrating</a>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative pt-24 pb-20 px-6 lg:px-16 text-center max-w-5xl mx-auto overflow-hidden">
-        <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <div class="absolute top-20 left-1/4 w-[300px] h-[300px] bg-purple-600/10 rounded-full blur-[100px] pointer-events-none"></div>
-        
-        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
-            Shape the <span class="gradient-text">future of health</span> <br class="hidden sm:inline" />before it happens.
+    <section class="relative max-w-7xl mx-auto px-6 pt-24 pb-20 text-center z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-800 bg-gray-900/60 text-xs font-medium text-gray-300 mb-8 backdrop-blur-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Eigeno Bio-Engine v2.4 Open-Weights Released
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight max-w-5xl mx-auto leading-[1.1] mb-8">
+            Shape the future of <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent">predictive health</span>.
         </h1>
-        <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-            Predict risk for 10 serious chronic conditions up to one year in advance. Simulate therapeutic intervention and uncover immediate repurposed drug candidates using proprietary AI biology models.
+        <p class="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto font-light leading-relaxed mb-12">
+            Deploy hyper-scalable generative and clinical-grade intelligence toolkits designed to project multi-morbidity risks 365 days in advance and uncover AI-driven pathway repurposed drug treatments.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#platform" class="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-blue-600 hover:opacity-95 text-white font-medium text-base px-8 py-3.5 rounded-full transition-all shadow-lg shadow-blue-500/10">
-                Start predicting risk
-            </a>
-            <a href="#solutions" class="w-full sm:w-auto border border-slate-700 bg-slate-900/50 hover:bg-slate-800/80 transition-colors text-slate-200 font-medium text-base px-8 py-3.5 rounded-full">
-                Explore enterprise solutions
-            </a>
-        </div>
-
-        <!-- Trusted Logos -->
-        <div class="mt-24 border-t border-slate-900 pt-10">
-            <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-6">Trusted by leading institutional systems and bio-pharma researchers</p>
-            <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-40 grayscale contrast-200">
-                <span class="text-sm font-bold tracking-wider text-slate-400">VERTEX HEALTH</span>
-                <span class="text-sm font-bold tracking-wider text-slate-400">NEXUS GENOMICS</span>
-                <span class="text-sm font-bold tracking-wider text-slate-400">APEX PHARMA</span>
-                <span class="text-sm font-bold tracking-wider text-slate-400">CORE LABS</span>
-                <span class="text-sm font-bold tracking-wider text-slate-400">BEACON MED</span>
-            </div>
+            <a href="#deployment" class="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-full transition-all shadow-lg shadow-blue-600/20">Access Platform API</a>
+            <a href="#diseases" class="w-full sm:w-auto px-8 py-4 bg-gray-900 border border-gray-800 hover:bg-gray-800 text-gray-200 font-semibold rounded-full transition-all">Explore 10 Pathologies</a>
         </div>
     </section>
 
-    <!-- Core Capabilities Overview Section -->
-    <section class="py-20 px-6 lg:px-16 max-w-7xl mx-auto border-t border-slate-900">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <p class="text-sm font-semibold tracking-wider text-emerald-400 uppercase mb-3">Enterprise-Ready Predictive Biology</p>
-                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-6">
-                    We'll help you stop disease progression like nobody's business.
-                </h2>
-                <p class="text-slate-400 text-base leading-relaxed mb-6">
-                    No dataset too complex, no timeline too tight. Transition directly from highly precise patient population stratifications to executable clinical insights with Eigeno, your validated platform partner.
-                </p>
-                <a href="#contact" class="inline-flex items-center text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors group">
-                    Work with our clinical team <span class="transform group-hover:translate-x-1 transition-transform ml-1">→</span>
-                </a>
-            </div>
-            
-            <div class="grid sm:grid-cols-2 gap-6">
-                <div class="gradient-border bg-slate-900/30 p-6 rounded-2xl">
-                    <div class="h-10 w-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 mb-4 font-bold">10</div>
-                    <h3 class="text-lg font-semibold text-white mb-2">Targeted Chronic Pathologies</h3>
-                    <p class="text-sm text-slate-400">Deep biological validation layers optimized specifically for major critical health systems globally.</p>
-                </div>
-                <div class="gradient-border bg-slate-900/30 p-6 rounded-2xl">
-                    <div class="h-10 w-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 mb-4 font-bold">1Y</div>
-                    <h3 class="text-lg font-semibold text-white mb-2">Early Warning Window</h3>
-                    <p class="text-sm text-slate-400">Advance warning model allows for preventative protocols, changing clinical trial and managed care outcomes.</p>
-                </div>
-                <div class="gradient-border bg-slate-900/30 p-6 rounded-2xl">
-                    <div class="h-10 w-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-4 font-bold">Rx</div>
-                    <h3 class="text-lg font-semibold text-white mb-2">Drug Repurposing Engine</h3>
-                    <p class="text-sm text-slate-400">Instantly maps predictive pathomechanisms against structural chemical catalogs for novel compound utility.</p>
-                </div>
-                <div class="gradient-border bg-slate-900/30 p-6 rounded-2xl">
-                    <div class="h-10 w-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 mb-4 font-bold">API</div>
-                    <h3 class="text-lg font-semibold text-white mb-2">Zero-Infra Integration</h3>
-                    <p class="text-sm text-slate-400">Secure cloud native or fully self-hosted deployment models structured to protect core patient data.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Disease Scope Section (The 10 Chronic Diseases) -->
-    <section id="diseases" class="py-20 bg-slate-950/40 border-t border-b border-slate-900 px-6 lg:px-16">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">Predictive Scope: 10 Serious Chronic Pathologies</h2>
-                <p class="text-slate-400 font-light">Our neural architecture uncovers latent biometric and multi-omic signals to predict risks 12 months before clinical manifestation.</p>
-            </div>
-            
-            <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-                <!-- Disease 1 -->
-                <div class="bg-slate-900/40 border border-slate-800/80 p-5 rounded-xl hover:border-slate-700 transition-colors">
-                    <span class="text-xs text-blue-400 font-medium tracking-wide uppercase block mb-1">Cardiovascular</span>
-                    <h4 class="text-base font-semibold text-white">Heart Failure</h4>
-                </div>
-                <!-- Disease 2 -->
-                <div class="bg-slate-900/40 border border-slate-800/80 p-5 rounded-xl hover:border-slate-700 transition-colors">
-                    <span class="text-xs text-blue-400 font-medium tracking-wide uppercase block mb-1">Metabolic</span>
-                    <h4 class="text-base font-semibold text-white">Type 2 Diabetes</h4>
-                </div>
-                <!-- Disease 3 -->
-                <div class="bg-slate-900/40 border border-slate-800/80 p-5 rounded-xl hover:border-slate-700 transition-colors">
-                    <span class="text-xs text-purple-400 font-medium tracking-wide uppercase block mb-1">Neurological</span>
-                    <h4 class="text-base font-semibold text-white">Alzheimer's Disease</h4>
-                </div>
-                <!-- Disease 4 -->
-                <div class="bg-slate-900/40 border border-slate-800/80 p-5 rounded-xl hover:border-slate-700 transition-colors">
-                    <span class="text-xs text-purple-400 font-medium tracking-wide uppercase block mb-1">Neurological</span>
-                    <h4 class="text-base font-semibold text-white">Parkinson's Disease</h4>
-                </div>
-                <!-- Disease 5 -->
-                <div class="bg-slate-900/40 border border-slate-800/80 p-5 rounded-xl hover:border-slate-700 transition-colors">
-                    <span class="text-xs text-emerald-400 font-medium tracking-wide uppercase block mb-1">Renal</span>
-                    <h4 class="text-base font-semibold text-white">Chronic Kidney Disease</h4>
-                </div>
-                <!-- Disease 6 -->
-                <div class="bg-slate-900/40 border border-slate-800/80 p-5 rounded-xl hover:border-slate-700 transition-colors">
-                    <span class="text-xs text-emerald-400 font-medium tracking-wide uppercase block mb-1">Pulmonary</span>
-                    <h4 class="text-base font-semibold text-white">COPD</h4>
-                </div>
-                <!-- Disease 7 -->
-                <div class="bg-slate-900/40 border border-slate-800/80 p-5 rounded-xl hover:border-slate-700 transition-colors">
-                    <span class="text-xs text-amber-400 font-medium tracking-wide uppercase block mb-1">Immunological</span>
-                    <h4 class="text-base font-semibold text-white">Rheumatoid Arthritis</h4>
-                </div>
-                <!-- Disease 8 -->
-                <div class="bg-slate-900/40 border border-slate-800/80 p-5 rounded-xl hover:border-slate-700 transition-colors">
-                    <span class="text-xs text-amber-400 font-medium tracking-wide uppercase block mb-1">Hepatic</span>
-                    <h4 class="text-base font-semibold text-white">NASH / MASH</h4>
-                </div>
-                <!-- Disease 9 -->
-                <div class="bg-slate-900/40 border border-slate-800/80 p-5 rounded-xl hover:border-slate-700 transition-colors">
-                    <span class="text-xs text-rose-400 font-medium tracking-wide uppercase block mb-1">Oncology</span>
-                    <h4 class="text-base font-semibold text-white">Colorectal Malignancy</h4>
-                </div>
-                <!-- Disease 10 -->
-                <div class="bg-slate-900/40 border border-slate-800/80 p-5 rounded-xl hover:border-slate-700 transition-colors">
-                    <span class="text-xs text-rose-400 font-medium tracking-wide uppercase block mb-1">Oncology</span>
-                    <h4 class="text-base font-semibold text-white">Pancreatic Carcinoma</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Drug Repurposing Engine (Stability Style Split Feature) -->
-    <section id="repurposing" class="py-20 px-6 lg:px-16 max-w-7xl mx-auto">
-        <div class="bg-gradient-to-br from-slate-900/80 to-slate-950 border border-slate-800/60 rounded-3xl p-8 lg:p-14 flex flex-col lg:flex-row items-center gap-12">
-            <div class="lg:w-1/2">
-                <span class="bg-purple-500/10 text-purple-400 text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wider mb-4 inline-block">Mechanism Matching</span>
-                <h3 class="text-3xl font-bold tracking-tight text-white mb-4">Algorithmic Drug Repurposing</h3>
-                <p class="text-slate-400 text-base leading-relaxed mb-6">
-                    Our platform doesn't just halt at predicting disease risk; it actively solves the therapeutic problem. By modeling disease state transitions down to cellular receptor interactions, our chemical matching models propose safe, well-tolerated, pre-approved drugs ready for rapid Phase II clinical integration.
-                </p>
-                <ul class="space-y-3 text-sm text-slate-300">
-                    <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-purple-400"></span> 94% reduction in early-stage discovery timelines</li>
-                    <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-purple-400"></span> Cross-referencing 14,000+ approved human compounds</li>
-                    <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-purple-400"></span> Target affinity predictive scores verified in vitro</li>
-                </ul>
-            </div>
-            <div class="lg:w-1/2 w-full bg-slate-900/60 border border-slate-800 p-6 rounded-2xl shadow-inner relative overflow-hidden">
-                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-purple-500/10 rounded-full blur-2xl"></div>
-                <div class="text-xs text-slate-500 font-mono mb-4 border-b border-slate-800 pb-2 flex justify-between items-center">
-                    <span>Eigeno-DrugMatch-Engine_v3.0</span>
-                    <span class="text-emerald-400 flex items-center gap-1"><span class="h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span> Live Simulation</span>
-                </div>
-                <!-- Simulated Interface Line Items -->
-                <div class="space-y-3 font-mono">
-                    <div class="p-3 bg-slate-950/80 rounded-lg border border-slate-800/80 flex items-center justify-between text-xs">
-                        <div>
-                            <span class="text-slate-400">Predicted Target:</span> <span class="text-white">Alzheimer's Early Phase Risk</span>
-                            <div class="text-[10px] text-slate-500 mt-0.5">Mechanism: Neuroinflammation Hyper-Activation</div>
-                        </div>
-                        <div class="text-right">
-                            <span class="text-purple-400 font-semibold block">Repurposed Candidate</span>
-                            <span class="text-[10px] text-slate-300 bg-purple-950 px-1.5 py-0.5 rounded">AEG-4122 (Anti-inflammatory)</span>
-                        </div>
-                    </div>
-                    <div class="p-3 bg-slate-950/80 rounded-lg border border-slate-800/80 flex items-center justify-between text-xs">
-                        <div>
-                            <span class="text-slate-400">Predicted Target:</span> <span class="text-white">MASH / Fibrosis Pathway</span>
-                            <div class="text-[10px] text-slate-500 mt-0.5">Mechanism: Hepatic Stellat Cell Activation</div>
-                        </div>
-                        <div class="text-right">
-                            <span class="text-purple-400 font-semibold block">Repurposed Candidate</span>
-                            <span class="text-[10px] text-slate-300 bg-purple-950 px-1.5 py-0.5 rounded">AEG-7890 (GLP-1 Modulator variant)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Deployment Options (Stability Style Deployment Section) -->
-    <section id="solutions" class="py-20 px-6 lg:px-16 max-w-7xl mx-auto border-t border-slate-900">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">Clinical AI that works with you, where you work.</h2>
-            <p class="text-slate-400 font-light">Deploy our foundational health models natively to support strict data sovereignty compliance frameworks.</p>
+    <!-- Pathologies Section -->
+    <section id="diseases" class="max-w-7xl mx-auto px-6 py-24 border-t border-gray-900 relative z-10">
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold tracking-tight text-white mb-4">1-Year Predictive Horizon Pathologies</h2>
+            <p class="text-gray-400 max-w-2xl font-light">Our clinical neural nets parse phenotypic, genomic, and real-world multi-omic data profiles to flag indicators 12 months ahead of standard diagnostics.</p>
         </div>
         
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="border border-slate-800/80 bg-slate-900/20 p-8 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <h4 class="text-lg font-semibold text-white mb-2">Self-Hosted / On-Prem</h4>
-                    <p class="text-sm text-slate-400 mb-6 leading-relaxed">Deploy models within your local infrastructure for advanced clinical customization, protecting protected health information (PHI) completely inside your secure firewall.</p>
-                </div>
-                <a href="#contact" class="text-sm font-medium text-emerald-400 hover:underline">Get enterprise license →</a>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+            <!-- 1 -->
+            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
+                <div class="text-red-400 mb-4 font-semibold text-xs tracking-wider uppercase">Cardiovascular</div>
+                <h3 class="text-lg font-bold text-white mb-2">Coronary Artery Disease</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed">Predicts endothelial dysregulation and plaque structural vulnerabilities 12 months before clinical manifestation.</p>
             </div>
-
-            <div class="border border-slate-800/80 bg-slate-900/20 p-8 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <h4 class="text-lg font-semibold text-white mb-2">Platform API</h4>
-                    <p class="text-sm text-slate-400 mb-6 leading-relaxed">Seamlessly integrate predictive scores and molecular discovery metrics into existing EHR/EMR setups without local resource overhead.</p>
-                </div>
-                <a href="#contact" class="text-sm font-medium text-emerald-400 hover:underline">See API pricing plans →</a>
+            <!-- 2 -->
+            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
+                <div class="text-amber-400 mb-4 font-semibold text-xs tracking-wider uppercase">Metabolic</div>
+                <h3 class="text-lg font-bold text-white mb-2">Type 2 Diabetes</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed">Flags continuous sub-clinical microvascular variations and progressive pancreatic beta-cell fatigue patterns.</p>
             </div>
-
-            <div class="border border-slate-800/80 bg-slate-900/20 p-8 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <h4 class="text-lg font-semibold text-white mb-2">Research Sandbox</h4>
-                    <p class="text-sm text-slate-400 mb-6 leading-relaxed">A specialized cloud workspace designed for academic or bio-pharma workflows to experiment with drug repurposing graph neural networks.</p>
-                </div>
-                <a href="#contact" class="text-sm font-medium text-emerald-400 hover:underline">Request researcher access →</a>
+            <!-- 3 -->
+            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
+                <div class="text-purple-400 mb-4 font-semibold text-xs tracking-wider uppercase">Neurological</div>
+                <h3 class="text-lg font-bold text-white mb-2">Alzheimer's Disease</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed">Identifies early blood-brain barrier decay vectors and initial systemic neural sync shifts.</p>
+            </div>
+            <!-- 4 -->
+            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
+                <div class="text-emerald-400 mb-4 font-semibold text-xs tracking-wider uppercase">Renal</div>
+                <h3 class="text-lg font-bold text-white mb-2">Chronic Kidney Disease</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed">Models structural hyperfiltration drops long prior to regular serum creatinine deviations.</p>
+            </div>
+            <!-- 5 -->
+            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
+                <div class="text-sky-400 mb-4 font-semibold text-xs tracking-wider uppercase">Pulmonary</div>
+                <h3 class="text-lg font-bold text-white mb-2">COPD Progression</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed">Tracks early persistent sub-clinical airway architecture adjustments and silent hypoxia risk profiles.</p>
+            </div>
+            <!-- 6 -->
+            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
+                <div class="text-pink-400 mb-4 font-semibold text-xs tracking-wider uppercase">Immunological</div>
+                <h3 class="text-lg font-bold text-white mb-2">Rheumatoid Arthritis</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed">Detects preclinical molecular autoantibody elevations before joint symptom presentation.</p>
+            </div>
+            <!-- 7 -->
+            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
+                <div class="text-orange-400 mb-4 font-semibold text-xs tracking-wider uppercase">Hepatic</div>
+                <h3 class="text-lg font-bold text-white mb-2">NASH / MASH</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed">Forecasts structural fatty liver inflammatory transitions into severe stage fibrosis.</p>
+            </div>
+            <!-- 8 -->
+            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
+                <div class="text-indigo-400 mb-4 font-semibold text-xs tracking-wider uppercase">Cardiovascular</div>
+                <h3 class="text-lg font-bold text-white mb-2">Chronic Heart Failure</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed">Identifies minor nocturnal biometric pattern drifts and silent fluid retention signals.</p>
+            </div>
+            <!-- 9 -->
+            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
+                <div class="text-yellow-500 mb-4 font-semibold text-xs tracking-wider uppercase">Oncology</div>
+                <h3 class="text-lg font-bold text-white mb-2">Early Lung Carcinoma</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed">Screens for deep micro-RNA variations and volatile metabolic byproduct exhalation changes.</p>
+            </div>
+            <!-- 10 -->
+            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
+                <div class="text-teal-400 mb-4 font-semibold text-xs tracking-wider uppercase">Neurological</div>
+                <h3 class="text-lg font-bold text-white mb-2">Parkinson's Disease</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed">Flags sleep architecture variations and autonomous cardiovascular dysregulation indicators.</p>
             </div>
         </div>
     </section>
 
-    <!-- Bottom Call To Action -->
-    <section class="py-24 text-center px-6 lg:px-16 max-w-4xl mx-auto border-t border-slate-900">
-        <h2 class="text-4xl font-bold tracking-tight text-white mb-4">Less guesswork. More preventive care.</h2>
-        <p class="text-slate-400 max-w-xl mx-auto mb-8 font-light text-base">The future of preventative oncology, cardiology, and longevity medicine is powered by scalable intelligence. Are you ready to deploy?</p>
-        <a href="#contact" class="inline-block bg-white text-slate-950 font-medium px-8 py-3.5 rounded-full hover:bg-slate-200 transition-colors shadow-md">Get Started Today</a>
-    </section>
-
-    <!-- Footer Area -->
-    <footer class="bg-slate-950/80 border-t border-slate-900 pt-16 pb-12 px-6 lg:px-16 text-sm text-slate-400">
-        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
-            <div class="col-span-2">
-                <a href="#" class="text-lg font-bold text-white block mb-4">Eigeno</a>
-                <p class="max-w-xs text-xs text-slate-500 leading-relaxed">Eigeno is unlocking the power of deep generative biology to extend healthy human lifespans. We design state-of-the-art predictive networks that are secure, clinically reliable, and designed to empower care networks and bio-pharma researchers.</p>
-            </div>
+    <!-- Drug Repurposing Section -->
+    <section id="repurposing" class="max-w-7xl mx-auto px-6 py-24 border-t border-gray-900 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-                <h5 class="text-xs font-semibold text-white uppercase tracking-wider mb-4">Company</h5>
-                <ul class="space-y-2 text-xs">
-                    <li><a href="#" class="hover:text-white transition-colors">Research Team</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Clinical Advisory</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Safety Protocols</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
-                </ul>
+                <h2 class="text-3xl font-bold tracking-tight text-white mb-6">AI-Driven Transcriptomic Drug Repurposing</h2>
+                <p class="text-gray-400 text-base font-light leading-relaxed mb-6">
+                    Rather than spending a decade engineering novel synthetic pathways from scratch, Eigeno maps the pathomechanisms of chronic diseases against a vast catalog of **pre-approved human safe small molecules**.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex gap-4">
+                        <div class="w-6 h-6 rounded-full bg-blue-900/50 border border-blue-500 flex items-center justify-center shrink-0 text-blue-400 text-xs">✓</div>
+                        <p class="text-gray-300 text-sm"><strong class="text-white">Safety Pre-Screened:</strong> Bypasses typical early-phase toxicology roadblocks by using compounds with established clinical records.</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-6 h-6 rounded-full bg-blue-900/50 border border-blue-500 flex items-center justify-center shrink-0 text-blue-400 text-xs">✓</div>
+                        <p class="text-gray-300 text-sm"><strong class="text-white">Affinity Prediction:</strong> Simulates ligand-protein docking mechanics at millions of data coordinates simultaneously.</p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h5 class="text-xs font-semibold text-white uppercase tracking-wider mb-4">Models</h5>
-                <ul class="space-y-2 text-xs">
-                    <li><a href="#" class="hover:text-white transition-colors">Eigeno-Risk-1Y</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Eigeno-DrugMatch</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Open Weights</a></li>
-                </ul>
-            </div>
-            <div>
-                <h5 class="text-xs font-semibold text-white uppercase tracking-wider mb-4">Legal</h5>
-                <ul class="space-y-2 text-xs">
-                    <li><a href="#" class="hover:text-white transition-colors">HIPAA Compliance</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
-                </ul>
+            
+            <!-- Terminal Simulating Box Window -->
+            <div class="terminal-window rounded-2xl overflow-hidden p-6 shadow-2xl shadow-black/80">
+                <div class="flex gap-2 mb-6">
+                    <span class="terminal-accent-dot bg-red-500"></span>
+                    <span class="terminal-accent-dot bg-yellow-500"></span>
+                    <span class="terminal-accent-dot bg-green-500"></span>
+                    <span class="text-xs text-gray-500 font-mono ml-2">eigeno-repurpose-simulation.py</span>
+                </div>
+                <div class="font-mono text-xs space-y-2.5 text-gray-400">
+                    <p class="text-gray-500">[INIT] Loading systemic transcriptomic disease networks...</p>
+                    <p class="text-blue-400">&gt;&gt; Targeting Node: AD-Hyperinflammation-09</p>
+                    <p class="text-yellow-400">&gt;&gt; Simulating small molecule chemical candidates: 42,910 matches</p>
+                    <div class="p-3 bg-gray-900/90 rounded border border-gray-800 my-4 text-gray-200">
+                        <p class="text-emerald-400 font-semibold">[MATCH FOUND] Compound ID: EIG-8041 (Rheumatologic Agent)</p>
+                        <p class="mt-1">Repurposed Indication: Alzheimer's 1-Yr Preventative Path</p>
+                        <p class="text-gray-500">Affinity Score: 98.42% | Validation Cohort: N=14,200</p>
+                    </div>
+                    <p class="text-gray-600">[READY] Awaiting verification query request pipeline...</p>
+                </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto border-t border-slate-900 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-600 gap-4">
-            <p>&copy; 2026 Eigeno BioAI Inc. All rights reserved.</p>
-            <p class="text-slate-500 text-center sm:text-right max-w-md">Disclaimer: For informational and research demonstration purposes only. Not a substitute for professional medical diagnosis or clinical judgment. Artificial Intelligence systems may generate statistical approximations.</p>
+    </section>
+
+    <!-- Deployment Framework Section -->
+    <section id="deployment" class="max-w-7xl mx-auto px-6 py-24 border-t border-gray-900 relative z-10">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold tracking-tight text-white mb-4">Enterprise Bio-Intelligence Ecosystem</h2>
+            <p class="text-gray-400 max-w-xl mx-auto font-light">Integrate clinical prediction frameworks seamlessly without building fragile database infrastructure pipelines from the ground up.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-8 bg-gray-900/30 border border-gray-800/60 rounded-3xl flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">Self-Hosted / On-Prem</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">Deploy full prediction networks entirely within your specialized hospital infrastructure cluster. **Guarantees complete HIPAA, GDPR, and local privacy alignment**.</p>
+                </div>
+                <a href="#contact" class="w-full text-center px-4 py-2.5 bg-gray-800 hover:bg-gray-700 text-white font-medium text-sm rounded-xl transition-all">Request Architecture License</a>
+            </div>
+
+            <div class="p-8 bg-gray-900/30 border border-blue-900/40 rounded-3xl flex flex-col justify-between relative shadow-lg shadow-blue-500/5">
+                <div class="absolute -top-3 right-6 px-3 py-1 bg-blue-600 rounded-full text-[10px] uppercase font-bold tracking-wider text-white">Recommended</div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">Developer Platform API</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">Connect patient diagnostic outputs over a simple REST web structure. Access model evaluations instantly with ultra-low computation response latencies.</p>
+                </div>
+                <a href="#contact" class="w-full text-center px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm rounded-xl transition-all">Get API Credentials</a>
+            </div>
+
+            <div class="p-8 bg-gray-900/30 border border-gray-800/60 rounded-3xl flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">Research Sandbox</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">A fully open weights model framework catalog tailored specifically for academic labs, validation cohorts, and bio-informatics researchers.</p>
+                </div>
+                <a href="#contact" class="w-full text-center px-4 py-2.5 bg-gray-800 hover:bg-gray-700 text-white font-medium text-sm rounded-xl transition-all">View Research Hub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="border-t border-gray-900 bg-black/40 py-12 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-gray-500">
+            <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded bg-gradient-to-tr from-blue-600 to-emerald-400 flex items-center justify-center text-[10px] font-black text-black">E</span>
+                <span class="text-gray-400 font-semibold">&copy; 2026 Eigeno Ltd. All rights reserved.</span>
+            </div>
+            <div class="flex gap-6 text-xs">
+                <a href="#" class="hover:text-gray-300">Privacy Registry</a>
+                <a href="#" class="hover:text-gray-300">Clinical Validation Papers</a>
+                <a href="#" class="hover:text-gray-300">HIPAA Compliance Charter</a>
+            </div>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 mt-8">
+            <p class="disclaimer-text">
+                This is for informational purposes only. For medical advice or diagnosis, consult a professional. AI responses may include mistakes.
+            </p>
         </div>
     </footer>
-
 </body>
 </html>
