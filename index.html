@@ -32,7 +32,7 @@
             </div>
             <div class="flex items-center gap-4">
                 <a href="#contact" class="hidden sm:inline-block text-sm font-medium text-gray-300 hover:text-white transition-colors">Get in touch</a>
-                <a href="#deployment" class="px-5 py-2.5 bg-white text-black font-semibold text-sm rounded-full hover:bg-gray-100 transition-all shadow-md shadow-white/5">Start Integrating</a>
+                <a href="#deployment" class="px-5 py-2.5 bg-white text-black font-semibold text-sm rounded-full hover:bg-gray-100 transition-all shadow-md shadow-white/5">New Application</a>
 <!--                <a href="#deployment" class="px-5 py-2.5 bg-white text-black font-semibold text-sm rounded-full hover:bg-gray-100 transition-all shadow-md shadow-white/5">Start Integrating</a>-->
             </div>
         </div>
@@ -56,7 +56,7 @@
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="#deployment" class="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-full transition-all shadow-lg shadow-blue-600/20">Partner With Us</a>
-            <a href="#diseases" class="w-full sm:w-auto px-8 py-4 bg-gray-900 border border-gray-800 hover:bg-gray-800 text-gray-200 font-semibold rounded-full transition-all">Explore 10 Pathologies</a>
+            <a href="#diseases" class="w-full sm:w-auto px-8 py-4 bg-gray-900 border border-gray-800 hover:bg-gray-800 text-gray-200 font-semibold rounded-full transition-all">Currently Available Models</a>
         </div>
     </section>
 
@@ -64,73 +64,146 @@
     <section id="diseases" class="max-w-7xl mx-auto px-6 py-24 border-t border-gray-900 relative z-10">
         <div class="mb-16">
             <h2 class="text-3xl font-bold tracking-tight text-white mb-4">5-Year Predictive Horizon Pathologies</h2>
-            <p class="text-gray-400 max-w-2xl font-light">Our clinical transformers find patterns in a patient's history of EHR labs, drug exposures, and comorbidities to predict disease risk 5 years ahead of standard diagnostics.</p>
+            <p class="text-gray-400 max-w-2xl font-light">
+                Our clinical transformers find patterns in a patient's history of EHR labs, drug exposures, and comorbidities to predict disease risk 5 years ahead of standard diagnostics.
+                All metrics over >100K validation-set samples never seen during training (pre-training or transfer learning).
+            </p>
 <!--            <p class="text-gray-400 max-w-2xl font-light">Our clinical neural nets parse phenotypic, genomic, and real-world multi-omic data profiles to flag indicators 12 months ahead of standard diagnostics.</p>-->
         </div>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
             <!-- 1 -->
             <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
-                <div class="text-red-400 mb-4 font-semibold text-xs tracking-wider uppercase">Cardiovascular</div>
-                <h3 class="text-lg font-bold text-white mb-2">Coronary Artery Disease</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">Predicts endothelial dysregulation and plaque structural vulnerabilities 12 months before clinical manifestation.</p>
+                <div class="text-red-400 mb-4 font-semibold text-xs tracking-wider uppercase">Digestive</div>
+                <h3 class="text-lg font-bold text-white mb-2">Pancreatic Cancer</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed">93% balanced AUC-ROC.</p>
             </div>
             <!-- 2 -->
             <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
                 <div class="text-amber-400 mb-4 font-semibold text-xs tracking-wider uppercase">Metabolic</div>
                 <h3 class="text-lg font-bold text-white mb-2">Type 2 Diabetes</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">Flags continuous sub-clinical microvascular variations and progressive pancreatic beta-cell fatigue patterns.</p>
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Flags continuous sub-clinical microvascular variations and progressive pancreatic beta-cell fatigue patterns.</p>-->
             </div>
             <!-- 3 -->
             <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
                 <div class="text-purple-400 mb-4 font-semibold text-xs tracking-wider uppercase">Neurological</div>
                 <h3 class="text-lg font-bold text-white mb-2">Alzheimer's Disease</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">Identifies early blood-brain barrier decay vectors and initial systemic neural sync shifts.</p>
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Identifies early blood-brain barrier decay vectors and initial systemic neural sync shifts.</p>-->
             </div>
             <!-- 4 -->
             <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
                 <div class="text-emerald-400 mb-4 font-semibold text-xs tracking-wider uppercase">Renal</div>
                 <h3 class="text-lg font-bold text-white mb-2">Chronic Kidney Disease</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">Models structural hyperfiltration drops long prior to regular serum creatinine deviations.</p>
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Models structural hyperfiltration drops long prior to regular serum creatinine deviations.</p>-->
             </div>
             <!-- 5 -->
             <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
                 <div class="text-sky-400 mb-4 font-semibold text-xs tracking-wider uppercase">Pulmonary</div>
                 <h3 class="text-lg font-bold text-white mb-2">COPD Progression</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">Tracks early persistent sub-clinical airway architecture adjustments and silent hypoxia risk profiles.</p>
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Tracks early persistent sub-clinical airway architecture adjustments and silent hypoxia risk profiles.</p>-->
             </div>
             <!-- 6 -->
             <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
                 <div class="text-pink-400 mb-4 font-semibold text-xs tracking-wider uppercase">Immunological</div>
                 <h3 class="text-lg font-bold text-white mb-2">Rheumatoid Arthritis</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">Detects preclinical molecular autoantibody elevations before joint symptom presentation.</p>
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Detects preclinical molecular autoantibody elevations before joint symptom presentation.</p>-->
             </div>
             <!-- 7 -->
             <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
                 <div class="text-orange-400 mb-4 font-semibold text-xs tracking-wider uppercase">Hepatic</div>
                 <h3 class="text-lg font-bold text-white mb-2">NASH / MASH</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">Forecasts structural fatty liver inflammatory transitions into severe stage fibrosis.</p>
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Forecasts structural fatty liver inflammatory transitions into severe stage fibrosis.</p>-->
             </div>
             <!-- 8 -->
             <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
                 <div class="text-indigo-400 mb-4 font-semibold text-xs tracking-wider uppercase">Cardiovascular</div>
                 <h3 class="text-lg font-bold text-white mb-2">Chronic Heart Failure</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">Identifies minor nocturnal biometric pattern drifts and silent fluid retention signals.</p>
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Identifies minor nocturnal biometric pattern drifts and silent fluid retention signals.</p>-->
             </div>
             <!-- 9 -->
             <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
                 <div class="text-yellow-500 mb-4 font-semibold text-xs tracking-wider uppercase">Oncology</div>
                 <h3 class="text-lg font-bold text-white mb-2">Early Lung Carcinoma</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">Screens for deep micro-RNA variations and volatile metabolic byproduct exhalation changes.</p>
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Screens for deep micro-RNA variations and volatile metabolic byproduct exhalation changes.</p>-->
             </div>
             <!-- 10 -->
             <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
                 <div class="text-teal-400 mb-4 font-semibold text-xs tracking-wider uppercase">Neurological</div>
                 <h3 class="text-lg font-bold text-white mb-2">Parkinson's Disease</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">Flags sleep architecture variations and autonomous cardiovascular dysregulation indicators.</p>
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Flags sleep architecture variations and autonomous cardiovascular dysregulation indicators.</p>-->
             </div>
         </div>
     </section>
+<!--    <section id="diseases" class="max-w-7xl mx-auto px-6 py-24 border-t border-gray-900 relative z-10">-->
+<!--        <div class="mb-16">-->
+<!--            <h2 class="text-3xl font-bold tracking-tight text-white mb-4">5-Year Predictive Horizon Pathologies</h2>-->
+<!--            <p class="text-gray-400 max-w-2xl font-light">Our clinical transformers find patterns in a patient's history of EHR labs, drug exposures, and comorbidities to predict disease risk 5 years ahead of standard diagnostics.</p>-->
+<!--&lt;!&ndash;            <p class="text-gray-400 max-w-2xl font-light">Our clinical neural nets parse phenotypic, genomic, and real-world multi-omic data profiles to flag indicators 12 months ahead of standard diagnostics.</p>&ndash;&gt;-->
+<!--        </div>-->
+<!--        -->
+<!--        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">-->
+<!--            &lt;!&ndash; 1 &ndash;&gt;-->
+<!--            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">-->
+<!--                <div class="text-red-400 mb-4 font-semibold text-xs tracking-wider uppercase">Cardiovascular</div>-->
+<!--                <h3 class="text-lg font-bold text-white mb-2">Coronary Artery Disease</h3>-->
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Predicts endothelial dysregulation and plaque structural vulnerabilities 12 months before clinical manifestation.</p>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; 2 &ndash;&gt;-->
+<!--            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">-->
+<!--                <div class="text-amber-400 mb-4 font-semibold text-xs tracking-wider uppercase">Metabolic</div>-->
+<!--                <h3 class="text-lg font-bold text-white mb-2">Type 2 Diabetes</h3>-->
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Flags continuous sub-clinical microvascular variations and progressive pancreatic beta-cell fatigue patterns.</p>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; 3 &ndash;&gt;-->
+<!--            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">-->
+<!--                <div class="text-purple-400 mb-4 font-semibold text-xs tracking-wider uppercase">Neurological</div>-->
+<!--                <h3 class="text-lg font-bold text-white mb-2">Alzheimer's Disease</h3>-->
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Identifies early blood-brain barrier decay vectors and initial systemic neural sync shifts.</p>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; 4 &ndash;&gt;-->
+<!--            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">-->
+<!--                <div class="text-emerald-400 mb-4 font-semibold text-xs tracking-wider uppercase">Renal</div>-->
+<!--                <h3 class="text-lg font-bold text-white mb-2">Chronic Kidney Disease</h3>-->
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Models structural hyperfiltration drops long prior to regular serum creatinine deviations.</p>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; 5 &ndash;&gt;-->
+<!--            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">-->
+<!--                <div class="text-sky-400 mb-4 font-semibold text-xs tracking-wider uppercase">Pulmonary</div>-->
+<!--                <h3 class="text-lg font-bold text-white mb-2">COPD Progression</h3>-->
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Tracks early persistent sub-clinical airway architecture adjustments and silent hypoxia risk profiles.</p>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; 6 &ndash;&gt;-->
+<!--            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">-->
+<!--                <div class="text-pink-400 mb-4 font-semibold text-xs tracking-wider uppercase">Immunological</div>-->
+<!--                <h3 class="text-lg font-bold text-white mb-2">Rheumatoid Arthritis</h3>-->
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Detects preclinical molecular autoantibody elevations before joint symptom presentation.</p>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; 7 &ndash;&gt;-->
+<!--            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">-->
+<!--                <div class="text-orange-400 mb-4 font-semibold text-xs tracking-wider uppercase">Hepatic</div>-->
+<!--                <h3 class="text-lg font-bold text-white mb-2">NASH / MASH</h3>-->
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Forecasts structural fatty liver inflammatory transitions into severe stage fibrosis.</p>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; 8 &ndash;&gt;-->
+<!--            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">-->
+<!--                <div class="text-indigo-400 mb-4 font-semibold text-xs tracking-wider uppercase">Cardiovascular</div>-->
+<!--                <h3 class="text-lg font-bold text-white mb-2">Chronic Heart Failure</h3>-->
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Identifies minor nocturnal biometric pattern drifts and silent fluid retention signals.</p>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; 9 &ndash;&gt;-->
+<!--            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">-->
+<!--                <div class="text-yellow-500 mb-4 font-semibold text-xs tracking-wider uppercase">Oncology</div>-->
+<!--                <h3 class="text-lg font-bold text-white mb-2">Early Lung Carcinoma</h3>-->
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Screens for deep micro-RNA variations and volatile metabolic byproduct exhalation changes.</p>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; 10 &ndash;&gt;-->
+<!--            <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">-->
+<!--                <div class="text-teal-400 mb-4 font-semibold text-xs tracking-wider uppercase">Neurological</div>-->
+<!--                <h3 class="text-lg font-bold text-white mb-2">Parkinson's Disease</h3>-->
+<!--                <p class="text-gray-400 text-xs font-light leading-relaxed">Flags sleep architecture variations and autonomous cardiovascular dysregulation indicators.</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
     <!-- Drug Repurposing Section -->
     <section id="repurposing" class="max-w-7xl mx-auto px-6 py-24 border-t border-gray-900 relative z-10">
@@ -138,7 +211,7 @@
             <div>
                 <h2 class="text-3xl font-bold tracking-tight text-white mb-6">AI-Driven Digital Twin-Based Drug Repurposing</h2>
                 <p class="text-gray-400 text-base font-light leading-relaxed mb-6">
-                    Rather than spending a decade engineering novel synthetic pathways from scratch, Eigeno simulates the effects of a vast catalog of **pre-approved human safe small molecules** on chronic disease risk.
+                    Rather than spending a decade engineering novel synthetic pathways from scratch, Eigeno simulates the effects of a vast catalog of <b>pre-approved human safe small molecules</b> on chronic disease risk.
                 </p>
                 <div class="space-y-4">
                     <div class="flex gap-4">
@@ -161,13 +234,13 @@
                     <span class="text-xs text-gray-500 font-mono ml-2">eigeno-repurpose-simulation.py</span>
                 </div>
                 <div class="font-mono text-xs space-y-2.5 text-gray-400">
-                    <p class="text-gray-500">[INIT] Loading systemic transcriptomic disease networks...</p>
-                    <p class="text-blue-400">&gt;&gt; Targeting Node: AD-Hyperinflammation-09</p>
-                    <p class="text-yellow-400">&gt;&gt; Simulating small molecule chemical candidates: 42,910 matches</p>
+                    <p class="text-gray-500">[INIT] Loading digital twin model...</p>
+                    <p class="text-blue-400">&gt;&gt; Building EHR timelines dataset (max_TTD = 5 years)</p>
+                    <p class="text-yellow-400">&gt;&gt; Running genetic algorithm (max_drugs = 5)</p>
                     <div class="p-3 bg-gray-900/90 rounded border border-gray-800 my-4 text-gray-200">
-                        <p class="text-emerald-400 font-semibold">[MATCH FOUND] Compound ID: EIG-8041 (Rheumatologic Agent)</p>
+                        <p class="text-emerald-400 font-semibold">[DONE] Best individual embeddings (PADs ommitted): 443, 524, 678</p>
                         <p class="mt-1">Repurposed Indication: Alzheimer's 1-Yr Preventative Path</p>
-                        <p class="text-gray-500">Affinity Score: 98.42% | Validation Cohort: N=14,200</p>
+                        <p class="text-gray-500">Average risk reduction: 40.42% | Validation Cohort: N=148,234</p>
                     </div>
                     <p class="text-gray-600">[READY] Awaiting verification query request pipeline...</p>
                 </div>
@@ -219,32 +292,50 @@
     <!-- Deployment Framework Section -->
     <section id="deployment" class="max-w-7xl mx-auto px-6 py-24 border-t border-gray-900 relative z-10">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold tracking-tight text-white mb-4">Enterprise Bio-Intelligence Ecosystem</h2>
-            <p class="text-gray-400 max-w-xl mx-auto font-light">Integrate clinical prediction frameworks seamlessly without building fragile database infrastructure pipelines from the ground up.</p>
+            <h2 class="text-3xl font-bold tracking-tight text-white mb-4">A Digital Twin Framework</h2>
+            <p class="text-gray-400 max-w-xl mx-auto font-light">
+                Leverage our metabolome model to dynamically simulate phenotypes. The implications are limitless, e.g.,
+                assess future health or disease risk, condition on a particular history to achieve personalized medicine,
+                simulate the effect of drugs, use this to repurpose existing drugs to other diseases,
+                run montecarlo simulations of current phenotype states during clinical trials to make informed next
+                step decisions, find clues on what mechanisms are behind a disease,
+                use these clues to seed drug discovery etc.
+            </p>
+<!--            <p class="text-gray-400 max-w-xl mx-auto font-light">Integrate clinical prediction frameworks seamlessly without building fragile database infrastructure pipelines from the ground up.</p>-->
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="p-8 bg-gray-900/30 border border-gray-800/60 rounded-3xl flex flex-col justify-between">
                 <div>
-                    <h3 class="text-xl font-bold text-white mb-2">Self-Hosted / On-Prem</h3>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">Deploy full prediction networks entirely within your specialized hospital infrastructure cluster. **Guarantees complete HIPAA, GDPR, and local privacy alignment**.</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Deploy LDT / Mass Screenings</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">
+                        Deploy our existing models within your systems or let us partner into a new disease.
+                        Since no specialized markers are needed, mass scans of you current patient pool are
+                        within grasp.
+                    </p>
                 </div>
                 <a href="#contact" class="w-full text-center px-4 py-2.5 bg-gray-800 hover:bg-gray-700 text-white font-medium text-sm rounded-xl transition-all">Request Architecture License</a>
             </div>
 
             <div class="p-8 bg-gray-900/30 border border-blue-900/40 rounded-3xl flex flex-col justify-between relative shadow-lg shadow-blue-500/5">
-                <div class="absolute -top-3 right-6 px-3 py-1 bg-blue-600 rounded-full text-[10px] uppercase font-bold tracking-wider text-white">Recommended</div>
+<!--                <div class="absolute -top-3 right-6 px-3 py-1 bg-blue-600 rounded-full text-[10px] uppercase font-bold tracking-wider text-white">Recommended</div>-->
                 <div>
-                    <h3 class="text-xl font-bold text-white mb-2">Developer Platform API</h3>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">Connect patient diagnostic outputs over a simple REST web structure. Access model evaluations instantly with ultra-low computation response latencies.</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Target a New Disease for Drug Repurposing</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">
+                        Let's bring to market our current patented drug repurposing candidates or let us find new ones for other diseases.
+                    </p>
                 </div>
                 <a href="#contact" class="w-full text-center px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm rounded-xl transition-all">Get API Credentials</a>
             </div>
 
             <div class="p-8 bg-gray-900/30 border border-gray-800/60 rounded-3xl flex flex-col justify-between">
                 <div>
-                    <h3 class="text-xl font-bold text-white mb-2">Research Sandbox</h3>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">A fully open weights model framework catalog tailored specifically for academic labs, validation cohorts, and bio-informatics researchers.</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Seed Drug Discovery</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">
+                        Our models uncover markers of disease (and associated mechanisms) whose importance is borne on the data.
+                        This can inform better seeds for drug discovery. Our models can also be used to enrich your clinical trials.
+                        Leverage our models as simulators to make more informed decisions during trials.
+                    </p>
                 </div>
                 <a href="#contact" class="w-full text-center px-4 py-2.5 bg-gray-800 hover:bg-gray-700 text-white font-medium text-sm rounded-xl transition-all">View Research Hub</a>
             </div>
@@ -289,7 +380,7 @@
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-gray-500">
             <div class="flex items-center gap-2">
                 <span class="w-6 h-6 rounded bg-gradient-to-tr from-blue-600 to-emerald-400 flex items-center justify-center text-[10px] font-black text-black">E</span>
-                <span class="text-gray-400 font-semibold">&copy; 2026 Eigeno Ltd. All rights reserved.</span>
+                <span class="text-gray-400 font-semibold">&copy; 2026 Eigeno LLC. All rights reserved.</span>
             </div>
             <div class="flex gap-6 text-xs">
                 <a href="#" class="hover:text-gray-300">Privacy Registry</a>
