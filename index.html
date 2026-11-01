@@ -63,10 +63,12 @@
     <!-- Pathologies Section -->
     <section id="diseases" class="max-w-7xl mx-auto px-6 py-24 border-t border-gray-900 relative z-10">
         <div class="mb-16">
-            <h2 class="text-3xl font-bold tracking-tight text-white mb-4">5-Year Predictive Horizon Pathologies</h2>
+            <h2 class="text-3xl font-bold tracking-tight text-white mb-4">1-Year Predictive Horizon Pathologies</h2>
             <p class="text-gray-400 max-w-2xl font-light">
-                Our clinical transformers find patterns in a patient's history of EHR labs, drug exposures, and comorbidities to predict disease risk 5 years ahead of standard diagnostics.
-                All metrics over >100K validation-set samples never seen during training (pre-training or transfer learning).
+                Our clinical transformers find patterns in a patient's history of EHR labs, drug exposures,
+                and comorbidities to predict disease risk upto a year ahead of standard diagnostics.
+                All metrics over >100K validation-set samples never seen during training
+                (pre-training or transfer learning).
             </p>
 <!--            <p class="text-gray-400 max-w-2xl font-light">Our clinical neural nets parse phenotypic, genomic, and real-world multi-omic data profiles to flag indicators 12 months ahead of standard diagnostics.</p>-->
         </div>
@@ -74,9 +76,14 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
             <!-- 1 -->
             <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
-                <div class="text-red-400 mb-4 font-semibold text-xs tracking-wider uppercase">Digestive</div>
-                <h3 class="text-lg font-bold text-white mb-2">Pancreatic Cancer</h3>
-                <p class="text-gray-400 text-xs font-light leading-relaxed">93% balanced AUC-ROC.</p>
+                <div class="text-red-400 mb-4 font-semibold text-xs tracking-wider uppercase">Oncology</div>
+                <h3 class="text-lg font-bold text-white mb-2">Prostate Cancer</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed">
+                    ROC-AUC: 81%
+                    Sensitivity: 80%*
+                    Specificity: 80%*<br>
+                    * At 0.39 decision threshold
+                </p>
             </div>
             <!-- 2 -->
             <div class="p-6 bg-gray-900/40 border border-gray-800/80 rounded-2xl card-hover-effect">
